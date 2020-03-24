@@ -7,20 +7,17 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="library"><button onclick="render()">BUT</button></div>
+    <div id="library"><button onclick="render()">Render Library</button></div>
     <div>
       <button id="addBook">Add New Book</button>
       <div class="formPopup" id="popupForm">
         <form id="newBook">
           <span class="close">&times;</span>
-          <label for="author">Author's Name</label><br />
-          <input type="text" id="author" name="author" /><br />
-          <label for="title">Title</label><br />
-          <input type="text" id="title" name="title" /><br />
-          <label for="pages">Number of Pages</label><br />
-          <input type="text" id="pages" name="pages" /><br />
-          <label for="readStatus">Have you read this?</label><br />
-          <input type="text" id="readStatus" name="readStatus" /><br />
+          <input type="text" id="title" placeholder="Title" /><br />
+          <input type="text" id="author" placeholder="Author's Name" /><br />
+          <input type="number" id="pages" placeholder="Pages" /><br />
+          <input type="checkbox" id="readStatus" placeholder="Read" />
+          <input type="checkbox" id="readStatus" placeholder="Not Read" /><br />
           <input id="submit" type="submit" value="Submit" />
         </form>
       </div>

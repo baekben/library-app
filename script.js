@@ -2,8 +2,11 @@ let myLibrary = [];
 
 let library = document.getElementById('library');
 
-function Book() {
-  //the constructor...
+function Book(title, author, pages, read) {
+  this.title = title;
+  this.author = author;
+  this.pages = pages;
+  this.read = read;
 }
 
 function addBookToLibrary() {
