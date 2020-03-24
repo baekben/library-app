@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="library"><button onclick="render()">BUT</button></div>
+    <div>
+      <button id="addBook">Add New Book</button>
+      <div class="formPopup" id="popupForm">
+        <form id="newBook">
+          <span class="close">&times;</span>
+          <label for="author">Author's Name</label><br />
+          <input type="text" id="author" name="author" /><br />
+          <label for="title">Title</label><br />
+          <input type="text" id="title" name="title" /><br />
+          <label for="pages">Number of Pages</label><br />
+          <input type="text" id="pages" name="pages" /><br />
+          <label for="readStatus">Have you read this?</label><br />
+          <input type="text" id="readStatus" name="readStatus" /><br />
+          <input id="submit" type="submit" value="Submit" />
+        </form>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
