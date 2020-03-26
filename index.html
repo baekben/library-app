@@ -7,19 +7,22 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <h1>Library</h1>
     <div id="library"><button onclick="render()">Render Library</button></div>
     <div>
       <button id="addBook">Add New Book</button>
       <div class="formPopup" id="popupForm">
-        <form id="newBook">
+        <div class="form">
           <span class="close">&times;</span>
-          <input type="text" id="title" placeholder="Title" /><br />
-          <input type="text" id="author" placeholder="Author's Name" /><br />
-          <input type="number" id="pages" placeholder="Pages" /><br />
-          <input type="checkbox" id="readStatus" placeholder="Read" />
-          <input type="checkbox" id="readStatus" placeholder="Not Read" /><br />
-          <input id="submit" type="submit" value="Submit" />
-        </form>
+          <form id="newBook">
+            <input type="text" id="title" placeholder="Title" /><br />
+            <input type="text" id="author" placeholder="Author's Name" /><br />
+            <input type="number" min="0" id="pages" placeholder="Pages" /><br />
+            <label>Read</label
+            ><input type="checkbox" id="readStatus" placeholder="Read" /> <br />
+            <button id="submit" onclick="addBookToLibrary()">Submit</button>
+          </form>
+        </div>
       </div>
     </div>
     <script src="script.js"></script>
