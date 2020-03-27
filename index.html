@@ -8,22 +8,22 @@
   </head>
   <body>
     <h1>Library</h1>
-    <div id="library"><button onclick="render()">Render Library</button></div>
+    <button onclick="render()">Render Library</button>
+    <div id="library"></div>
     <div>
       <button id="addBook">Add New Book</button>
       <div class="formPopup" id="popupForm">
         <div class="form">
           <span class="close">&times;</span>
-          <form id="newBook">
-            <input type="text" id="title" placeholder="Title" /><br />
-            <input type="text" id="author" placeholder="Author's Name" /><br />
-            <input type="number" min="0" id="pages" placeholder="Pages" /><br />
-            <label>Read</label
-            ><input type="checkbox" id="readStatus" placeholder="Read" /> <br />
-            <button id="submit" onclick="addBookToLibrary()">Submit</button>
-          </form>
+          <input type="text" id="title" placeholder="Title" /><br />
+          <input type="text" id="author" placeholder="Author's Name" /><br />
+          <input type="number" min="0" id="pages" placeholder="Pages" /><br />
+          <label>Read</label
+          ><input type="checkbox" id="readStatus" placeholder="Read" /> <br />
+          <button id="submit" onclick="addBookToLibrary()">Submit</button>
         </div>
       </div>
+      <div id="catalog"></div>
     </div>
     <script src="script.js"></script>
   </body>
