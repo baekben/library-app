@@ -6,7 +6,13 @@ var form = document.getElementById('popupForm');
 var newBook = document.getElementById('addBook');
 var span = document.getElementsByClassName('form');
 
+var idNumber = 0;
+
 newBook.onclick = function() {
+  document.getElementById('title').value = null;
+  document.getElementById('author').value = null;
+  document.getElementById('pages').value = null;
+  document.getElementById('readStatus').checked = null;
   console.log('Form opened');
   form.style.display = 'block';
 };
@@ -26,9 +32,9 @@ function Book(title, author, pages, read) {
   this.author = author;
   this.pages = pages;
   this.read = read;
-  this.info = function() {
-    return [title, author, pages, read];
-  };
+  // this.info = function() {
+  //   return [title, author, pages, read];
+  // };
 }
 
 function addBookToLibrary() {
@@ -59,13 +65,37 @@ function addBookToLibrary() {
 }
 
 function render() {
-  console.log('Rendering...');
-  for (i = 0; i < myLibrary.length; i++) {
-    var book = document.createTextNode(`${myLibrary[i]} \n`);
-    library.appendChild(book);
-    //print it to html
+  if (myLibrary == '') {
+    alert('ERROR\nPlease add a book before\nrendering.');
   }
+  console.log(myLibrary);
+  console.log('Rendering...');
+  let table = document.querySelector('table');
+  let library = Object.keys(myLibrary[0]);
+  makeTable(table, myLibrary);
+  // generateTableHead(table, library);
   console.log(myLibrary);
 }
 
-function catalog() {}
+// function generateTableHead(table, data) {
+//   let thead = table.createTHead();
+//   let row = thead.insertRow();
+//   for (let key of data) {
+//     let th = document.createElement('th');
+//     let text = document.createTextNode(key);
+//     th.appendChild(text);
+//     row.appendChild(th);
+//   }
+// }
+
+function makeTable(table, library) {
+  for (let book of library) {
+    let row = table.insertRow();
+    row.setAttribute('id', idNumber++);
+    for (key in book) {
+      let cell = row.insertCell();
+      let text = document.createTextNode(book[key]);
+      cell.appendChild(text);
+    }
+  }
+}

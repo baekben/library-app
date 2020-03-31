@@ -19,11 +19,23 @@
           <input type="text" id="author" placeholder="Author's Name" /><br />
           <input type="number" min="0" id="pages" placeholder="Pages" /><br />
           <label>Read</label
-          ><input type="checkbox" id="readStatus" placeholder="Read" /> <br />
+          ><input type="checkbox" id="readStatus" placeholder="Read" />
+          <br />
           <button id="submit" onclick="addBookToLibrary()">Submit</button>
         </div>
       </div>
-      <div id="catalog"></div>
+      <div id="catalog">
+        <table>
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Author</th>
+              <th>Pages</th>
+              <th>Read</th>
+            </tr>
+          </thead>
+        </table>
+      </div>
     </div>
     <script src="script.js"></script>
   </body>
