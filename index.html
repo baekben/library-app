@@ -8,7 +8,6 @@
   </head>
   <body>
     <h1>Library</h1>
-    <button onclick="render()">Render Library</button>
     <div id="library"></div>
     <div>
       <button id="addBook">Add New Book</button>
@@ -21,7 +20,7 @@
           <label>Read</label
           ><input type="checkbox" id="readStatus" placeholder="Read" />
           <br />
-          <button id="submit" onclick="addBookToLibrary()">Submit</button>
+          <button id="submit" onclick="createNewBook()">Submit</button>
         </div>
       </div>
       <div id="catalog">
@@ -33,6 +32,8 @@
               <th>Pages</th>
               <th>Read</th>
             </tr>
+            <tbody>
+            </tbody>
           </thead>
         </table>
       </div>
