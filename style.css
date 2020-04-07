@@ -1,3 +1,43 @@
+html,
+body {
+  height: 100%;
+  background-color: #252a34;
+  font-family: 'Lora', serif;
+}
+h1 {
+  font-size: 60px;
+  text-align: center;
+  color: #eaeaea;
+}
+
+#catalog,
+#adding {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#addBook {
+  font-size: 20px;
+  font-family: 'Lora', serif;
+  background-color: #08d9d6;
+  border: 1px solid #08d9d6;
+  border-radius: 5px;
+}
+.deleteButton {
+  color: black;
+  text-emphasis: bold;
+  font-size: 15px;
+  font-family: 'Lora', serif;
+  background-color: #ff2e63;
+  border: 1px solid #ff2e63;
+  border-radius: 5px;
+}
+
+#catalog {
+  padding-top: 40px;
+}
+
 .formPopup {
   display: none;
   position: fixed;
@@ -29,5 +69,31 @@
 .close:focus {
   color: black;
   text-decoration: none;
+  cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+  background-color: #eaeaea;
+}
+
+thead {
+  color: #252a34;
+}
+
+tbody,
+th,
+td {
+  border: 1px solid black;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: center;
+}
+
+.read:hover {
+  text-decoration: underline;
   cursor: pointer;
 }

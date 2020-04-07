@@ -99,6 +99,7 @@ function makeTable(table, library) {
     for (key in book) {
       let cell = row.insertCell();
       if (key == 'read') {
+        cell.setAttribute('class', 'read');
         cell.setAttribute('id', `read${idNumber}`);
         cell.setAttribute('onclick', 'status(this.id)');
       }
